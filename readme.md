@@ -21,8 +21,19 @@ This service automatically updates a Cloudflare DNS A record with your current p
    ```
 
 3. **Configure the service**:
-   - Edit `config.ini` and fill in your Cloudflare API token, zone name, record name, and update interval.
 
+- Create a file named 'config.ini' in the same directory as this script.
+- Add the following content to 'config.ini' and fill in your details:
+  
+    ```bash
+    # [Cloudflare]
+    # api_token = YOUR_CLOUDFLARE_API_TOKEN
+    # zone_name = your_domain.com
+    # record_name = your_subdomain.your_domain.com
+    #
+    # [Service]
+    # update_interval_seconds = 300
+    ```
 ## Service Commands
 
 Run these commands in the folder containing `cloudfare_dns_updater_service.py`.  
