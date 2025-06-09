@@ -14,15 +14,13 @@ This service automatically updates a Cloudflare DNS A record with your current p
 ## Setup
 
 1. **Clone or copy the files to a folder** (e.g., `C:\cloudfare_dns_updater_service`).
-
 2. **Install dependencies** (in an Administrator Command Prompt or PowerShell):
 
-   ```
+   ```bash
    pip install requests cloudflare-python pywin32
    ```
 
 3. **Configure the service**:
-
    - Edit `config.ini` and fill in your Cloudflare API token, zone name, record name, and update interval.
 
 ## Service Commands
@@ -32,31 +30,31 @@ Run these commands in the folder containing `cloudfare_dns_updater_service.py`.
 
 ### Install the Service
 
-```
+```bash
 python cloudfare_dns_updater_service.py install
 ```
 
 ### Start the Service
 
-```
+```bash
 python cloudfare_dns_updater_service.py start
 ```
 
 ### Stop the Service
 
-```
+```bash
 python cloudfare_dns_updater_service.py stop
 ```
 
 ### Restart the Service
 
-```
+```bash
 python cloudfare_dns_updater_service.py restart
 ```
 
 ### Uninstall the Service
 
-```
+```bash
 python cloudfare_dns_updater_service.py remove
 ```
 
@@ -66,10 +64,10 @@ python cloudfare_dns_updater_service.py remove
 
 ## Notes
 
-- The service will only update the DNS record if your public IP address changes.
-- Make sure your API token has permissions to edit DNS records for your zone.
-- To check the service status, you can use Windows Services Manager or:
+- The service only updates the DNS record if your public IP address changes.
+- Ensure your API token has permission to edit DNS records for your zone.
+- To check the service status, use Windows Services Manager or:
 
-  ```
+  ```bash
   python cloudfare_dns_updater_service.py status
   ```
