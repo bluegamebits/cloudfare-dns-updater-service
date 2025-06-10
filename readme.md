@@ -34,6 +34,14 @@ This service automatically updates a Cloudflare DNS A record with your current p
     # [Service]
     # update_interval_seconds = 300
     ```
+
+4. **Install and start the service**:
+
+    ```bash
+    python cloudfare_dns_updater_service.py install
+    python cloudfare_dns_updater_service.py start
+    ```
+
 ## Service Commands
 
 Run these commands in the folder containing `cloudfare_dns_updater_service.py`.  
